@@ -53,8 +53,7 @@ gtm_auth <- function(new_user = FALSE, no_auto = FALSE) {
     needed,
     new_user = new_user,
     no_auto = no_auto,
-    environment_var = "GA_AUTH_FILE",
-    travis_environment_var = "TRAVIS_GA_AUTH_FILE"
+    environment_var = "GA_AUTH_FILE"
   )
 
   myMessage("Authenticated", level = 3)
