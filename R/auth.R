@@ -38,7 +38,7 @@
 #' @import googleAuthR
 #' @importFrom tools file_ext
 #' @export
-gtm_auth <- function(new_user = FALSE, no_auto = FALSE) {
+gtm_auth <- function() {
   needed <-
     c(
       'https://www.googleapis.com/auth/tagmanager.delete.containers',
@@ -51,8 +51,6 @@ gtm_auth <- function(new_user = FALSE, no_auto = FALSE) {
     )
   out <- googleAuthR::gar_auto_auth(
     needed,
-    new_user = new_user,
-    no_auto = no_auto,
     environment_var = "GA_AUTH_FILE"
   )
 
